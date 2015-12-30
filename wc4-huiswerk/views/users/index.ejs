@@ -1,0 +1,16 @@
+<h1><%= title %></h1>
+
+<table>
+	<thead>
+		<td>email</td>
+		<td>naam</td>
+	</thead>
+	<tbody>
+		<% for (var i = 0; i<users.length; i++){%>
+			<tr>
+				<td><%=users[i].email%></td>
+				<td><%=users[i].name%></td>
+			</tr>
+		<% } %>
+	</tbody>
+</table>
