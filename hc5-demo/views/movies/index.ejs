@@ -1,0 +1,32 @@
+<%- include('../partials/head.ejs') %>
+
+	<p>
+		<a href="/movies/add/">Add</a>
+	</p>
+    
+    <% if(data.length){ %>     
+	<table>
+		<tr>
+			<th>Edit</th>
+			<th>Title</th>
+			<th>Year</th>
+			<th>Director</th>
+			<th>Rating</th>
+			<th>Delete</th>
+		</tr>
+		<% for(var i = 0;i < data.length;i++) { %>                 
+		<tr>
+			<td><a href="/movies/edit/<%=data[i].id%>">Edit</a></td>
+			<td><%=data[i].title%></td>
+			<td><%=data[i].year%></td>
+			<td><%=data[i].director%></td>
+			<td><%=data[i].rating%></td>
+			<td><a href="/movies/delete/<%=data[i].id%>">Delete</a></td>
+		</tr>
+		<% } %>
+	</table>
+	<%	}else{ %>
+	<p>No movies found</p>
+	<% } %>
+
+<%- include('../partials/foot.ejs') %>
