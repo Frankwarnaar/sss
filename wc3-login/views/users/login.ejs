@@ -1,16 +1,18 @@
 <html>
-<head>
-	<title>login</title>
-	<meta charset="utf-8"/>
-</head>
-<body>
-	<form method="POST" action="../../routes/users.js">
-		<label>username:
-			<input type="text" name="username"/>
-		</label>
-		<label>password:
-			<input type="text" name="username"/>
-		</label>
-	</form>
-</body>
+	<head>
+		<meta charset="utf-8"/>
+		<title>login</title>
+		
+	</head>
+	<body>
+		<form method="POST" action="../../users/login">
+			<label>Naam:
+				<input type="text" name="username" placeholder="Uw naam">
+			</label>
+			<label>Wachtwoord:
+				<input type="password" name="password" placeholder="">
+			</label>
+			<input type="submit" value="login">
+		</form>
+	</body>
 </html>

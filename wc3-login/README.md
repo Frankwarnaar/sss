@@ -16,3 +16,4 @@ Je gaat een loginprocedure bouwen, waarbij op basis van sessies wordt gecontrole
 8. Nu zou de gebruikersnaam moeten worden weergegeven op [192.168.56.101:3000/users](192.168.56.101:3000/users).
 
 Vergeet niet je code telkens te uploaden en de applicatie met ```node app.js``` te herstarten als je wijzigingen hebt doorgevoerd. Of gebruik ```nodemon app.js``` zodat de applicatie automatisch wordt herstart als de bestanden wijzigen.
+# SSS-week3

@@ -1,11 +1,15 @@
 var express = require('express');
 var session = require('express-session');
+var bodyParser = require('body-parser');
 
 var path = require('path');
 var app = express();
 var userRoutes = require('./routes/users');
+
 // Setup serving static assets
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -13,7 +17,7 @@ app.set('view engine', 'ejs');
 
 // Add session support
 app.use(session({
-  secret: '...', // Customize this string for security!
+  secret: 'WibautStraat2-4', // Customize this string for security!
   saveUninitialized: true,
   resave: false
 }));
