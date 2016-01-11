@@ -32,14 +32,12 @@ router.post('/login', function(req, res){
   var username = req.body.username;
   var password = req.body.password;
   req.getConnection(function(err, connection){
-    connection.query('SELECT * FROM users', function(err, results) {
-      for (var i=0; i<results.length; i++){
-        if (username === results[i].name && password === results[i].password){ 
-          req.session.username = username;
-          res.redirect('/users');
-        }
-      }
-      if (!req.session.username){
+    connection.query('SELECT * FROM users WHERE name = ? and password = ?', [username, password], function(err, results) {
+      console.log(results);
+      if (results.length>0){ 
+        req.session.username = username;
+        res.redirect('/users');
+      } else{
         res.render('users/login', {
           postUrl: '/users/login',
           error: 'Gebruikersnaam en/of wachtwoord onjuist.'
