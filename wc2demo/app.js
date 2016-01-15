@@ -10,7 +10,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); //de views verwijst naar views in ander mapje (views is en ejs path.join plakt 'views' achter directories)
-app.set('view engine', 'ejs'); //Hier laadt je de templating engine 'ejs'
+app.set('view engine', 'ejs'); //Hier laad je de templating engine 'ejs'
 
 // Connect routers to routes
 app.use('/', indexRouter); //Als er niks achter de slah wordt ingevoerd, laad indexrouter
