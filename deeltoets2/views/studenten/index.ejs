@@ -1,0 +1,13 @@
+<%- include('../deelsjabloon/kop.ejs'); %>
+	<h1>Studenten</h1>
+	<!-- Opdracht 3 + Opdracht 4a -->
+	<ul>
+		<%for (var i = gegevens.length; i>0; i--){%>
+			<a href="studenten/<%=[i-1]%>"><li><%=gegevens[i-1].voornaam + ' ' + gegevens[i-1].achternaam%></li></a>
+		<%}%>
+	</ul>
+
+
+<%- include('../deelsjabloon/voet.ejs'); %>
+
+

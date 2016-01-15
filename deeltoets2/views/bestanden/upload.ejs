@@ -1,0 +1,13 @@
+<%- include('../deelsjabloon/kop.ejs'); %>
+	<h1>Bestanden</h1>
+
+	<form action="/bestanden/upload" method="post" enctype="multipart/form-data">
+  		<label for="file-field">
+  			Bestand: <input type="file" name="bestand" id="file-field" value="" />
+  		</label>
+    	<input type="submit" id="submit" value="Upload bestand" />
+	</form>
+
+<%- include('../deelsjabloon/voet.ejs'); %>
+
+
