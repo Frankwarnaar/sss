@@ -1,7 +1,7 @@
 {
   "name": "sss-exercises4",
   "version": "0.0.1",
-  "description": "Exercise 4 for server-side scripting in node.js course",
+  "description": "Exercise 4 for server-side scripting in node.js by Frank Warnaar",
   "private": true,
   "main": "index.js",
   "directories": {
@@ -22,6 +22,6 @@
     "nodejs",
     "course"
   ],
-  "author": "",
+  "author": "Frank Warnaar",
   "license": "MIT"
 }
