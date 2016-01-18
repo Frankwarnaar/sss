@@ -4,7 +4,7 @@ var router = express.Router();
 // Create routes for the following URL's
 
 // [GET] /users
-router.get('/', function(req, res){
+router.get('/', function(req, res) {
   if(req.session.username){
     res.render('users/index', {
       title: 'Welcome, ' + req.session.username
@@ -16,7 +16,7 @@ router.get('/', function(req, res){
 });
 
 // [GET] /users/login
-router.get('/login', function(req, res){
+router.get('/login', function(req, res) {
   if (req.session.username){
     res.redirect('/users');
   } else {
@@ -28,7 +28,7 @@ router.get('/login', function(req, res){
 });
 
 // [POST] /users/login
-router.post('/login', function(req, res){
+router.post('/login', function(req, res) {
   var username = req.body.username;
   var password = req.body.password;
   req.getConnection(function(err, connection){
@@ -82,7 +82,7 @@ router.post('/register', function(req, res) {
   }
 });
 
-router.get('/edit/:id', function(req, res){
+router.get('/edit/:id', function(req, res) {
   var id = req.params.id;
   req.getConnection(function(err, connection){
     connection.query("SELECT * FROM users WHERE id = ? ", [id], function(err, results){
